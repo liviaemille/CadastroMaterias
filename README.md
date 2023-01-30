@@ -1,1 +1,5 @@
-"Atividade Avaliativa da matÇria de Programaá∆o Web do curso de Inform†tica pelo IFRN Campus Caic¢, feita por L°via Ferreira, Maria Eduarda Costa e PÉmella Dantas" 
+"Atividade Avaliativa da mat√©ria de Programa√ß√£o Web do curso de Inform√°tica pelo IFRN Campus Caic√≥.
+Trata-se de um crud b√°sico para cadastro de mat√©rias escolares e foi desenvolvido por:
+- L√≠via √âmille Ferreira da Silva
+- Maria Eduarda de Medeiros Costa
+- P√¢mella Janel Dantas Batista" 

@@ -1,0 +1,36 @@
+{% extends 'flexy-bootstrap-lite/html/index.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+
+
+<div class="col-6">
+    <h1 class="mb-0 fw-bold">Matérias</h1> 
+</div>
+    <div class="card-body">
+            <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Nome da matéria</th>
+                    <th scope="col">Professor</th>
+                    <th scope="col">Carga Horária</th>
+                </tr>
+                {% for listaMaterias in listaMaterias %}
+                    <tr>
+                        <th scope="col">{{listaMaterias.materia}}</th>
+                        <th scope="col">{{listaMaterias.professor}}</th>
+                        <th scope="col">{{listaMaterias.cargaHoraria}}</th>
+                    </tr>
+                {% endfor %}
+                                                </thead>
+                                            <tbody>
+                                    </table>
+                                </div>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>            
+        </div>
+
+{% endblock %}
+

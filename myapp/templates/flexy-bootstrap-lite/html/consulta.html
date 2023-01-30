@@ -1,0 +1,11 @@
+{% extends 'flexy-bootstrap-lite/html/index.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+
+<form action="{% url 'buscaMateria' %}" method="get">        
+    <input name="buscaMateria">
+    &nbsp&nbsp
+    <button type="submit">Buscar Matéria</button>   
+</form> 
+
+{% endblock %}

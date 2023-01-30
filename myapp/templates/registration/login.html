@@ -1,0 +1,40 @@
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Flexy lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Flexy admin lite design, Flexy admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+        content="Flexy Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Flexy Admin Lite Template by WrapPixel</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/Flexy-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static '/assets/images/favicon.png' %}">
+    <!-- Custom CSS -->
+    <link href="{% static '/dist/css/style.min.css' %}" rel="stylesheet">
+</head>
+
+<div class="d-flex align-items-center h-100">
+    <div class="m-auto">
+        <h3>Insira suas credenciais</h3>
+        <form action="." method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+            <input class="btn btn-primary" type="submit" value="Login">
+        </form>
+    </div>
+  </div>
+
+        <script src="{% static '/assets/libs/jquery/dist/jquery.min.js' %}"></script>
+        <!-- Bootstrap tether Core JavaScript -->
+        <script src="{% static '/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '/dist/js/app-style-switcher.js' %}"></script>
+        <!--Wave Effects -->
+        <script src="{% static '/dist/js/waves.js' %}"></script>
+        <!--Menu sidebar -->
+        <script src="{% static '/dist/js/sidebarmenu.js' %}"></script>
+        <!--Custom JavaScript -->
+        <script src="{% static '/dist/js/custom.js' %}"></script>

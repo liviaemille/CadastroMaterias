@@ -1,0 +1,16 @@
+{% extends 'flexy-bootstrap-lite/html/index.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+
+        <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                        <div class="text-end upgrade-btn">
+                            <button type="submit" class="btn btn-success d-none d-md-inline-block text-white">Salvar</button>
+                </div>
+        </form>
+{% else %}
+        <h1 class="mb-0 fw-bold">Você não tem permissão para acessar essa página. Faça login!</h1>
+{% endif %}
+{% endblock %}

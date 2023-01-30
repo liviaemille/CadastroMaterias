@@ -1,0 +1,37 @@
+{% extends 'flexy-bootstrap-lite/html/index.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<h1 class="mb-0 fw-bold">Matérias</h1> 
+<div class="text-end upgrade-btn">
+    <a href="{% url 'adicionarMateria' %}" class="btn btn-dark text-white">Criar nova matéria</a>
+</div>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Nome da matéria</th>
+                                            <th scope="col">Professor</th>
+                                            <th scope="col">Carga Horária</th>
+                                            <th scope="col">Opções</th>
+                                        </tr>
+                                        {% for materia in materias %}
+                                            <tr>
+                                                <th scope="col">{{materia.materia}}</th>
+                                                <th scope="col">{{materia.professor}}</th>
+                                                <th scope="col">{{materia.cargaHoraria}}</th>
+                                                <th scope="col"> <a class="mdi mdi-account-edit" href="{% url 'updateMateria' materia.id %}"></a> - <a class="mdi mdi-delete"href="{% url 'deleteMateria' materia.id %}"></a></th>
+                                            </tr>
+                                        {% endfor %}
+                                        </thead>
+                                        <tbody>
+                                    </table>
+
+{% else %}
+    <h1 class="mb-0 fw-bold">Você não tem permissão para acessar essa página. Faça login!</h1>
+{% endif %}
+
+
+{% endblock %}
